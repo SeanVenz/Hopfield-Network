@@ -31,3 +31,14 @@ E:\CS CLASS FILES\INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwo
 E:\CS CLASS FILES\INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.CoreCompileInputs.cache
 E:\CS CLASS FILES\INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.exe
 E:\CS CLASS FILES\INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.pdb
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.exe.config
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.exe
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.pdb
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.AssemblyReference.cache
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.SuggestedBindingRedirects.cache
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.Form1.resources
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.Properties.Resources.resources
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.GenerateResource.cache
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.CoreCompileInputs.cache
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.exe
+C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.pdb

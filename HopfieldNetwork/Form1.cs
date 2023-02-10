@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,19 +21,22 @@ namespace HopfieldNetwork
         /// <summary>
         /// THIS PROGRAM IS FOR A HOPFIELD NETWORK WITH LAYERS OF FULLY INTERCONNECTED NEURONS. 
         /// THE NETWORK SHOULD RECALL THE PATTERNS PLUS "+" AND MINUS "-" symbols CORRECTLY
-        /// sakto ba ni dol remove lang dol if dele
+        /// AND REMEMBER SOME PATTERNS THAT ARE NOT IN THE TRAINING SET BUT LOOKS LIKE THE
+        /// PLUS "+" AND MINUS "-" SYMBOLS.
         /// </summary>
 
-        int[] values = { -1, -1, -1, -1, -1, -1, -1, -1, -1 }; 
+        int[] values = {-1, -1, -1, -1, -1, -1, -1, -1, -1 };
+        int[] invec = new int[9];
+        int[] outvec = new int[9];
         int[] output = new int[9];
-        readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 }, //1
-                                                { 0, 0, 0, 0, 0, 0, 0, 2, 0 }, //2
-                                                { 2, 0, 0, -2, -2, -2, 2, 0, 2 }, //3
-                                                { 2, 0, -2, 0, 2, 2, -2, 0, -2 }, //4
-                                                { 2, 0, -2, 2, 0, 2, -2, 0 ,-2 }, //5
-                                                { 2, 0, -2, 2, 2, 0, -2, 0 ,-2 }, //6
-                                                { 2, 0, 2, -2, -2, -2, 0, 0, 2 }, //7
-                                                { 0, 2, 0, 0, 0, 0, 0, 0, 0 }, //8
+        readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 },   //1
+                                                { 0, 0, 0, 0, 0, 0, 0, 2, 0 },      //2
+                                                { 2, 0, 0, -2, -2, -2, 2, 0, 2 },   //3
+                                                { 2, 0, -2, 0, 2, 2, -2, 0, -2 },   //4
+                                                { 2, 0, -2, 2, 0, 2, -2, 0 ,-2 },   //5
+                                                { 2, 0, -2, 2, 2, 0, -2, 0 ,-2 },   //6
+                                                { 2, 0, 2, -2, -2, -2, 0, 0, 2 },   //7
+                                                { 0, 2, 0, 0, 0, 0, 0, 0, 0 },      //8
                                                 { 2, 0, 2, -2, -2, -2, 2, 0, 0 } }; //9
 
 
@@ -162,11 +166,6 @@ namespace HopfieldNetwork
             }
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void button82_Click(object sender, EventArgs e)
         {
             //textBox2.Text = values[8].ToString();
@@ -174,22 +173,34 @@ namespace HopfieldNetwork
             for (int i = 0; i < 9; i++)
             {
                 newStr += values[i] + ", ";
+                invec[i] = values[i];
+                outvec[i] = values[i];
             }
             newStr += "}";
             textBox2.Text = newStr;
+            
             int temp = 0;
             
-            //multiplication and addition of weights and input values
+            //multiplication and addition of weights and input values asynchronously
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    temp += (values[j] * wtarr[i, j]);
+                    temp += (invec[j] * wtarr[i, j]);
                 }
+                if (temp > 0)
+                {
+                    invec[i] = 1;
+                }
+                else
+                {
+                    invec[i] = -1;
+                }
+                outvec[i] = invec[i];
                 output[i] = temp;
                 temp = 0;
             }
-
+            
             string newStr2 = "Output" + " = { ";
             for (int i = 0; i < 9; i++)
             {
@@ -199,7 +210,7 @@ namespace HopfieldNetwork
             textBox3.Text = newStr2;
 
             //threshold
-            int[] threshold= new int[9];
+            int[] threshold = new int[9];
             for (int i = 0; i < 9; i++)
             {
                 if (output[i] > 0)
@@ -230,11 +241,6 @@ namespace HopfieldNetwork
             {
                 btns[i].BackColor = (output[i] > 0) ? Color.Black : Color.White;
             }
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button19_Click(object sender, EventArgs e)
