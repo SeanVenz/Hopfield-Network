@@ -24,7 +24,7 @@ namespace HopfieldNetwork
         /// </summary>
 
         int[] values = { -1, -1, -1, -1, -1, -1, -1, -1, -1 }; 
-        int[] output = new int[100];
+        int[] output = new int[9];
         readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 },
                                                 { 0, 0, 0, 0, 0, 0, 0, 2, 0 },
                                                 { 2, 0, 0, -2, -2, -2, 2, 0, 2 },
@@ -197,6 +197,18 @@ namespace HopfieldNetwork
             }
             newStr2 += "}";
             textBox3.Text = newStr2;
+
+            button10.BackColor = (output[0] > 0) ? Color.Black : Color.White;
+            button11.BackColor = (output[1] > 0) ? Color.Black : Color.White;
+            button12.BackColor = (output[2] > 0) ? Color.Black : Color.White;
+            button13.BackColor = (output[3] > 0) ? Color.Black : Color.White;
+            button14.BackColor = (output[4] > 0) ? Color.Black : Color.White;
+            button15.BackColor = (output[5] > 0) ? Color.Black : Color.White;
+            button16.BackColor = (output[6] > 0) ? Color.Black : Color.White;
+            button17.BackColor = (output[7] > 0) ? Color.Black : Color.White;
+            button18.BackColor = (output[8] > 0) ? Color.Black : Color.White;
+
+
         }
 
         private void button10_Click(object sender, EventArgs e)
