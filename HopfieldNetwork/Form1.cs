@@ -24,16 +24,16 @@ namespace HopfieldNetwork
         /// </summary>
 
         int[] values = { -1, -1, -1, -1, -1, -1, -1, -1, -1 }; 
-        int[] output = new int[100];
-        readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 },
-                                                { 0, 0, 0, 0, 0, 0, 0, 2, 0 },
-                                                { 2, 0, 0, -2, -2, -2, 2, 0, 2 },
-                                                { 2, 0, -2, 0, 2, 2, -2, 0, -2 },
-                                                { 2, 0, -2, 2, 0, 2, -2, 0 ,-2 },
-                                                { 2, 0, -2, 2, 2, 0, -2, 0 ,-2 },
-                                                { 2, 0, 2, -2, -2, -2, 0, 0, 2 },
-                                                { 0, 2, 0, 0, 0, 0, 0, 0, 0 },
-                                                { 2, 0, 2, -2, -2, -2, 2, 0, 0 } };
+        int[] output = new int[9];
+        readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 }, //1
+                                                { 0, 0, 0, 0, 0, 0, 0, 2, 0 }, //2
+                                                { 2, 0, 0, -2, -2, -2, 2, 0, 2 }, //3
+                                                { 2, 0, -2, 0, 2, 2, -2, 0, -2 }, //4
+                                                { 2, 0, -2, 2, 0, 2, -2, 0 ,-2 }, //5
+                                                { 2, 0, -2, 2, 2, 0, -2, 0 ,-2 }, //6
+                                                { 2, 0, 2, -2, -2, -2, 0, 0, 2 }, //7
+                                                { 0, 2, 0, 0, 0, 0, 0, 0, 0 }, //8
+                                                { 2, 0, 2, -2, -2, -2, 2, 0, 0 } }; //9
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -197,10 +197,60 @@ namespace HopfieldNetwork
             }
             newStr2 += "}";
             textBox3.Text = newStr2;
+
+            //threshold
+            int[] threshold= new int[9];
+            for (int i = 0; i < 9; i++)
+            {
+                if (output[i] > 0)
+                {
+                    threshold[i] = 1;
+                }
+                else
+                {
+                    threshold[i] = -1;
+                }
+            }
+
+            string newStr3 = "Threshold" + " = { ";
+            for (int i = 0; i < 9; i++)
+            {
+                newStr3 += threshold[i] + ", ";
+            }
+            newStr3 += "}";
+            textBox4.Text = newStr3;
+
+            //group button10 to button18
+            Button[] btns = { button10, button11, button12, 
+                            button13, button14, button15, 
+                            button16, button17, button18 };
+
+            //loop through the buttons with their corresponding output[] values
+            for (int i = 0; i < 9; i++)
+            {
+                btns[i].BackColor = (output[i] > 0) ? Color.Black : Color.White;
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            //group button1 to button18
+            Button[] buttons = { button1, button2, button3, button4, button5, button6, button7, button8, button9,
+                                button10, button11, button12, button13, button14, button15, button16, button17, button18 };
+
+            for (int i = 0; i < 18; i++)
+            {
+                buttons[i].BackColor = Color.White;
+                for (int j = 0; j < 9; j++)
+                {
+                    values[j] = -1;
+                }
+            }
 
         }
     }
