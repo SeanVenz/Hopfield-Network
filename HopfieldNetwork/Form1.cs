@@ -16,7 +16,25 @@ namespace HopfieldNetwork
         {
             InitializeComponent();
         }
-        int[] values = new int[9];
+
+        /// <summary>
+        /// THIS PROGRAM IS FOR A HOPFIELD NETWORK WITH LAYERS OF FULLY INTERCONNECTED NEURONS. 
+        /// THE NETWORK SHOULD RECALL THE PATTERNS PLUS "+" AND MINUS "-" symbols CORRECTLY
+        /// sakto ba ni dol remove lang dol if dele
+        /// </summary>
+
+        int[] values = { -1, -1, -1, -1, -1, -1, -1, -1, -1 }; 
+        int[] output = new int[100];
+        readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 },
+                                                { 0, 0, 0, 0, 0, 0, 0, 2, 0 },
+                                                { 2, 0, 0, -2, -2, -2, 2, 0, 2 },
+                                                { 2, 0, -2, 0, 2, 2, -2, 0, -2 },
+                                                { 2, 0, -2, 2, 0, 2, -2, 0 ,-2 },
+                                                { 2, 0, -2, 2, 2, 0, -2, 0 ,-2 },
+                                                { 2, 0, 2, -2, -2, -2, 0, 0, 2 },
+                                                { 0, 2, 0, 0, 0, 0, 0, 0, 0 },
+                                                { 2, 0, 2, -2, -2, -2, 2, 0, 0 } };
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -151,7 +169,39 @@ namespace HopfieldNetwork
 
         private void button82_Click(object sender, EventArgs e)
         {
-            textBox2.Text = values[8].ToString();
+            //textBox2.Text = values[8].ToString();
+            string newStr = "Neuron Inputs" + " = { ";
+            for (int i = 0; i < 9; i++)
+            {
+                newStr += values[i] + ", ";
+            }
+            newStr += "}";
+            textBox2.Text = newStr;
+            int temp = 0;
+            
+            //multiplication and addition of weights and input values
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    temp += (values[j] * wtarr[i, j]);
+                }
+                output[i] = temp;
+                temp = 0;
+            }
+
+            string newStr2 = "Output" + " = { ";
+            for (int i = 0; i < 9; i++)
+            {
+                newStr2 += output[i] + ", ";
+            }
+            newStr2 += "}";
+            textBox3.Text = newStr2;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
