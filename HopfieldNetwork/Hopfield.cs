@@ -14,7 +14,6 @@ namespace HopfieldNetwork
         /// AND REMEMBER SOME PATTERNS THAT ARE NOT IN THE TRAINING SET BUT LOOKS LIKE THE
         /// PLUS "+" AND MINUS "-" SYMBOLS.
         /// </summary>
-        /// 
         readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 },   //1
                                                 { 0, 0, 0, 0, 0, 0, 0, 2, 0 },      //2
                                                 { 2, 0, 0, -2, -2, -2, 2, 0, 2 },   //3
@@ -117,6 +116,5 @@ namespace HopfieldNetwork
             str += "}";
             return str;
         }
-
     }
 }

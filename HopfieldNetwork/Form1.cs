@@ -14,7 +14,6 @@ namespace HopfieldNetwork
 {
     public partial class Form1 : Form
     {
-        
         public Form1()
         {
             InitializeComponent();
@@ -22,8 +21,6 @@ namespace HopfieldNetwork
 
         Hopfield hopfield = new Hopfield();
         int[] values = new int[9];
-
-        
 
         private void button82_Click(object sender, EventArgs e)
         {
@@ -94,6 +91,7 @@ namespace HopfieldNetwork
         {
             button2.BackColor = (button2.BackColor == Color.White) ? Color.Black : Color.White;
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             button3.BackColor = (button3.BackColor == Color.White) ? Color.Black : Color.White;
