@@ -54,11 +54,11 @@ namespace HopfieldNetwork
                 }
                 if (temp > 0)
                 {
-                    outvec[i] = 1;
+                    values[i] = 1;
                 }
                 else
                 {
-                    outvec[i] = -1;
+                    values[i] = -1;
                 }
                 output[i] = temp;
                 temp = 0;
