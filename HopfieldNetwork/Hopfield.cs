@@ -14,11 +14,7 @@ namespace HopfieldNetwork
         /// AND REMEMBER SOME PATTERNS THAT ARE NOT IN THE TRAINING SET BUT LOOKS LIKE THE
         /// PLUS "+" AND MINUS "-" SYMBOLS.
         /// </summary>
-
-        
-        int[] invec = new int[9];
-        int[] outvec = new int[9];
-        
+        /// 
         readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 },   //1
                                                 { 0, 0, 0, 0, 0, 0, 0, 2, 0 },      //2
                                                 { 2, 0, 0, -2, -2, -2, 2, 0, 2 },   //3
@@ -40,8 +36,6 @@ namespace HopfieldNetwork
             for (int i = 0; i < 9; i++)
             {
                 str += values[i] + ", ";
-                invec[i] = values[i];
-                outvec[i] = values[i];
             }
             str += "}";
             return str;
