@@ -12,7 +12,6 @@ This is a repository intended for a Hopfield Network. The weight matrices given 
 
 ### Remembering the `-` pattern
 ![image](https://user-images.githubusercontent.com/111744641/218262000-33103496-8de6-4315-a918-30852f307306.png)
-![image](https://user-images.githubusercontent.com/111744641/218262393-6a279bbf-19d7-4003-a905-f7fc7197dded.png)
 ![image](https://user-images.githubusercontent.com/111744641/218262400-1e755adc-19a9-4176-8ad0-fe52d14b154a.png)
 ![image](https://user-images.githubusercontent.com/111744641/218262415-d84aad4f-c1eb-46ba-a26c-5c91a7dce2e8.png)
 
