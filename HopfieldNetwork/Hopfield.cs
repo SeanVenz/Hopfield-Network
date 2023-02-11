@@ -10,11 +10,10 @@ namespace HopfieldNetwork
     {
         /// <summary>
         /// THIS PROGRAM IS FOR A HOPFIELD NETWORK WITH LAYERS OF FULLY INTERCONNECTED NEURONS. 
-        /// THE NETWORK SHOULD RECALL THE PATTERNS PLUS "+" AND MINUS "-" symbols CORRECTLY
+        /// THE NETWORK SHOULD RECALL THE PATTERNS PLUS "+" AND MINUS "-" SYMBOLS CORRECTLY
         /// AND REMEMBER SOME PATTERNS THAT ARE NOT IN THE TRAINING SET BUT LOOKS LIKE THE
         /// PLUS "+" AND MINUS "-" SYMBOLS.
         /// </summary>
-        /// 
         readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 },   //1
                                                 { 0, 0, 0, 0, 0, 0, 0, 2, 0 },      //2
                                                 { 2, 0, 0, -2, -2, -2, 2, 0, 2 },   //3
@@ -117,6 +116,5 @@ namespace HopfieldNetwork
             str += "}";
             return str;
         }
-
     }
 }

@@ -42,3 +42,14 @@ C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Reposi
 C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.CoreCompileInputs.cache
 C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.exe
 C:\Users\quija\OneDrive\Desktop\3rd Year\Second sem\Intelligent Systems 2\Repositories\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.pdb
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.exe.config
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.exe
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.pdb
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.AssemblyReference.cache
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.SuggestedBindingRedirects.cache
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.Form1.resources
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.Properties.Resources.resources
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.GenerateResource.cache
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.CoreCompileInputs.cache
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.exe
+C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.pdb
