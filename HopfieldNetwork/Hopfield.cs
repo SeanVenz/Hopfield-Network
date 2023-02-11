@@ -18,7 +18,7 @@ namespace HopfieldNetwork
         
         int[] invec = new int[9];
         int[] outvec = new int[9];
-        int[] output = new int[9];
+        
         readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 },   //1
                                                 { 0, 0, 0, 0, 0, 0, 0, 2, 0 },      //2
                                                 { 2, 0, 0, -2, -2, -2, 2, 0, 2 },   //3
@@ -42,14 +42,15 @@ namespace HopfieldNetwork
             return str;
         }
         
-        public int[] asyncMultiplication(int[] result)
+        public int[] asyncMultiplication(int[] values)
         {
             int temp = 0;
+            int[] output = new int[9];
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    temp += wtarr[i, j] * outvec[j];
+                    temp += wtarr[i, j] * values[j];
                 }
                 if (temp > 0)
                 {
@@ -93,7 +94,7 @@ namespace HopfieldNetwork
             int[] threshold = new int[9];
             for (int i = 0; i < 9; i++)
             {
-                threshold[i] = (result[i] > 0) ? 1 : -1;
+                threshold[i] = (result[i] >= 0) ? 1 : -1;
             }
             return threshold;
         }
