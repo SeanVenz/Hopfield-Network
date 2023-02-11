@@ -9,36 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace HopfieldNetwork
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
         }
 
-        /// <summary>
-        /// THIS PROGRAM IS FOR A HOPFIELD NETWORK WITH LAYERS OF FULLY INTERCONNECTED NEURONS. 
-        /// THE NETWORK SHOULD RECALL THE PATTERNS PLUS "+" AND MINUS "-" symbols CORRECTLY
-        /// AND REMEMBER SOME PATTERNS THAT ARE NOT IN THE TRAINING SET BUT LOOKS LIKE THE
-        /// PLUS "+" AND MINUS "-" SYMBOLS.
-        /// </summary>
-
-        int[] values = {-1, -1, -1, -1, -1, -1, -1, -1, -1 };
-        int[] invec = new int[9];
-        int[] outvec = new int[9];
-        int[] output = new int[9];
-        readonly int[,] wtarr = new int[9, 9] { { 0, 0, 2, -2, -2, -2, 2, 0, 2 },   //1
-                                                { 0, 0, 0, 0, 0, 0, 0, 2, 0 },      //2
-                                                { 2, 0, 0, -2, -2, -2, 2, 0, 2 },   //3
-                                                { 2, 0, -2, 0, 2, 2, -2, 0, -2 },   //4
-                                                { 2, 0, -2, 2, 0, 2, -2, 0 ,-2 },   //5
-                                                { 2, 0, -2, 2, 2, 0, -2, 0 ,-2 },   //6
-                                                { 2, 0, 2, -2, -2, -2, 0, 0, 2 },   //7
-                                                { 0, 2, 0, 0, 0, 0, 0, 0, 0 },      //8
-                                                { 2, 0, 2, -2, -2, -2, 2, 0, 0 } }; //9
-
+        Hopfield hopfield = new Hopfield();
+        int[] values = { -1, -1, -1, -1, -1, -1, -1, -1, -1 };
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -168,77 +151,30 @@ namespace HopfieldNetwork
 
         private void button82_Click(object sender, EventArgs e)
         {
-            string newStr = "Neuron Inputs" + " = { ";
-            for (int i = 0; i < 9; i++)
-            {
-                newStr += values[i] + ", ";
-                invec[i] = values[i];
-                outvec[i] = values[i];
-            }
-            newStr += "}";
-            textBox2.Text = newStr;
-            
-            int temp = 0;
-            
-            //multiplication and addition of weights and input values asynchronously
-            for (int i = 0; i < 9; i++)
-            {
-                for (int j = 0; j < 9; j++)
-                {
-                    temp += (invec[j] * wtarr[i, j]);
-                }
-                if (temp > 0)
-                {
-                    invec[i] = 1;
-                }
-                else
-                {
-                    invec[i] = -1;
-                }
-                outvec[i] = invec[i];
-                output[i] = temp;
-                temp = 0;
-            }
-            
-            string newStr2 = "Output" + " = { ";
-            for (int i = 0; i < 9; i++)
-            {
-                newStr2 += output[i] + ", ";
-            }
-            newStr2 += "}";
-            textBox3.Text = newStr2;
+            //show input value on textbox
+            textBox2.Text = hopfield.showInput(values);
 
-            //threshold
-            int[] threshold = new int[9];
-            for (int i = 0; i < 9; i++)
-            {
-                if (output[i] > 0)
-                {
-                    threshold[i] = 1;
-                }
-                else
-                {
-                    threshold[i] = -1;
-                }
-            }
+            //store in int result the multiplication of matrices
+            int[] result = hopfield.asyncMultiplication(values);
 
-            string newStr3 = "Threshold" + " = { ";
-            for (int i = 0; i < 9; i++)
-            {
-                newStr3 += threshold[i] + ", ";
-            }
-            newStr3 += "}";
-            textBox4.Text = newStr3;
+            //show result on textbox3
+            textBox3.Text = hopfield.showOutput(result);
 
+            //calculate threshold for each value
+            int[] threshold = hopfield.calculateThreshold(result);
+
+            //show threshold on textbox4
+            textBox4.Text = hopfield.printThreshold(result);
+            
             //group button10 to button18
-            Button[] btns = { button10, button11, button12, 
-                            button13, button14, button15, 
+            Button[] btns = { button10, button11, button12,
+                            button13, button14, button15,
                             button16, button17, button18 };
 
             //loop through the buttons with their corresponding output[] values
             for (int i = 0; i < 9; i++)
             {
-                btns[i].BackColor = (output[i] > 0) ? Color.Black : Color.White;
+                btns[i].BackColor = (threshold[i] > 0) ? Color.Black : Color.White;
             }
         }
 
