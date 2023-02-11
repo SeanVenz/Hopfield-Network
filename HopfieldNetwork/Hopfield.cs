@@ -29,6 +29,11 @@ namespace HopfieldNetwork
                                                 { 0, 2, 0, 0, 0, 0, 0, 0, 0 },      //8
                                                 { 2, 0, 2, -2, -2, -2, 2, 0, 0 } }; //9
 
+        /// <summary>
+        /// shows the input of the user to the UI
+        /// </summary>
+        /// <param name="values">array of values inputted by the user</param>
+        /// <returns>a string of values inputted by the user</returns>
         public string showInput(int[] values)
         {
             string str = "Neuron Inputs" + " = { ";
@@ -41,7 +46,12 @@ namespace HopfieldNetwork
             str += "}";
             return str;
         }
-        
+
+        /// <summary>
+        /// Multiplies the input vector by the weight matrix
+        /// </summary>
+        /// <param name="values">array of values inputted by the user</param>
+        /// <returns>an array of values of the input vecotr multiplied by the weight matrix</returns>
         public int[] asyncMultiplication(int[] values)
         {
             int temp = 0;
@@ -66,6 +76,11 @@ namespace HopfieldNetwork
             return output;
         }
 
+        /// <summary>
+        /// Shows the output of the matrix multiplication to the UI
+        /// </summary>
+        /// <param name="result">array of results when input is multiplied to the weight vector</param>
+        /// <returns>an array of result</returns>
         public string showOutput(int[] result)
         {
             string str = "Output" + " = { ";
@@ -77,6 +92,26 @@ namespace HopfieldNetwork
             return str;
         }
 
+        /// <summary>
+        /// Calculates the threshold value of the output
+        /// </summary>
+        /// <param name="result">Result matrix</param>
+        /// <returns>The threshold value of the result</returns>
+        public int[] calculateThreshold(int[] result)
+        {
+            int[] threshold = new int[9];
+            for (int i = 0; i < 9; i++)
+            {
+                threshold[i] = (result[i] >= 0) ? 1 : -1;
+            }
+            return threshold;
+        }
+
+        /// <summary>
+        /// Prints the threshold result
+        /// </summary>
+        /// <param name="result">the threshold of the result matrix</param>
+        /// <returns>string of the threshold</returns>
         public string printThreshold(int[] result)
         {
             int[] threshold = calculateThreshold(result);
@@ -89,14 +124,5 @@ namespace HopfieldNetwork
             return str;
         }
 
-        public int[] calculateThreshold(int[] result)
-        {
-            int[] threshold = new int[9];
-            for (int i = 0; i < 9; i++)
-            {
-                threshold[i] = (result[i] >= 0) ? 1 : -1;
-            }
-            return threshold;
-        }
     }
 }
