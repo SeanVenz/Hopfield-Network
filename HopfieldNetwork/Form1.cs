@@ -168,7 +168,6 @@ namespace HopfieldNetwork
 
         private void button82_Click(object sender, EventArgs e)
         {
-            //textBox2.Text = values[8].ToString();
             string newStr = "Neuron Inputs" + " = { ";
             for (int i = 0; i < 9; i++)
             {
