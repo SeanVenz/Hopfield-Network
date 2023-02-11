@@ -40,19 +40,19 @@ namespace HopfieldNetwork
             values[8] = button9.BackColor == Color.Black ? 1 : -1;
 
             //show input value on textbox
-            textBox2.Text = hopfield.showInput(values);
+            label4.Text = hopfield.showInput(values);
 
             //store in int result the multiplication of matrices
             int[] result = hopfield.asyncMultiplication(values);
 
             //show result on textbox3
-            textBox3.Text = hopfield.showOutput(result);
+            label5.Text = hopfield.showOutput(result);
 
             //calculate threshold for each value
             int[] threshold = hopfield.calculateThreshold(result);
 
             //show threshold on textbox4
-            textBox4.Text = hopfield.printThreshold(result);
+            label6.Text = hopfield.printThreshold(result);
             
             //group button10 to button18
             Button[] btns = { button10, button11, button12,
@@ -78,9 +78,9 @@ namespace HopfieldNetwork
                 for (int j = 0; j < 9; j++)
                 {
                     values[j] = -1;
-                    textBox2.Text = "";
-                    textBox3.Text = "";
-                    textBox4.Text = "";
+                    label4.Text = "Neuron Inputs";
+                    label5.Text = "Output";
+                    label6.Text = "Threshold";
                 }
             }
         }
