@@ -52,7 +52,7 @@ namespace HopfieldNetwork
                 {
                     temp += wtarr[i, j] * values[j];
                 }
-                if (temp > 0)
+                if (temp >= 0)
                 {
                     values[i] = 1;
                 }
