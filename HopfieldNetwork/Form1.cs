@@ -63,6 +63,9 @@ namespace HopfieldNetwork
             }
         }
 
+        /// <summary>
+        /// Resets all the inputted and outputted values
+        /// </summary>
         private void button19_Click(object sender, EventArgs e)
         {
             //group button1 to button18
@@ -82,6 +85,10 @@ namespace HopfieldNetwork
             }
         }
 
+        /// <summary>
+        /// Changes the color of the button when clicked, 
+        /// depending on its precedent color
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             button1.BackColor = (button1.BackColor == Color.White) ? Color.Black : Color.White;
