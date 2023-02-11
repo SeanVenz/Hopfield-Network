@@ -255,6 +255,9 @@ namespace HopfieldNetwork
                 for (int j = 0; j < 9; j++)
                 {
                     values[j] = -1;
+                    textBox2.Text = "";
+                    textBox3.Text = "";
+                    textBox4.Text = "";
                 }
             }
 
