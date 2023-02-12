@@ -53,3 +53,18 @@ C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\Hop
 C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.CoreCompileInputs.cache
 C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.exe
 C:\Users\Andre\Desktop\School\CS346 - Intelligent Systems 2\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.pdb
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.exe.config
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.exe.manifest
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.application
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.exe
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\bin\Debug\HopfieldNetwork.pdb
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.AssemblyReference.cache
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.SuggestedBindingRedirects.cache
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.Form1.resources
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.Properties.Resources.resources
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.GenerateResource.cache
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.csproj.CoreCompileInputs.cache
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.exe.manifest
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.application
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.exe
+E:\CS CLASS FILES\CS346 INTELLIGENT SYSTEMS 2\GroupWork\Hopfield-Network\HopfieldNetwork\obj\Debug\HopfieldNetwork.pdb
